@@ -133,7 +133,7 @@ body {
 	margin-right: 10%;
 }
 
-.tab {
+.mtab {
 	position: absolute;
 	right: 0;
 	top: 50%;
@@ -146,13 +146,12 @@ body {
 	margin-left: 0.75rem;
 }
 
-.tab a {
+.mtab a {
 	color: white;
 }
 
-.tab .col{
-	display: block;
-	position: relative;
+.mtab .col{
+	display: inline-block;
 	right: 0;
 }
 
@@ -207,11 +206,15 @@ body {
 	}
 
 	.foot-bar {
-		position: absolute;
 		top: 0;
 		left: 0;
-		padding-top: 6vh;
+		height: 2.4em;
+		margin-top: 3vh;
+		padding-left: 0;
+		padding-right: 0;
 		padding-bottom: 0;
+		overflow-x: scroll;
+		overflow-y: hidden;
 	}
 
 	.foot-bar .row {
@@ -232,10 +235,27 @@ body {
 		padding-top: 1em;
 	}
 
-	.tab {
+	.mtab {
 		left: 0;
 		right: auto;
+		bottom: auto;
 		margin-left: 0;
+	}
+
+	.mtab a {
+		display: inline-block;
+		box-sizing: initial;
+	}
+
+	.mtab li {
+		display: table-cell;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.slide-title-info {
+		width: 100%;
+		padding-left: 0;
 	}
 
 }
