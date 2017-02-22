@@ -41,7 +41,7 @@ body {
 	padding-left: 6vw;
 	padding-right: 6vw;
 	opacity: 1;
-	display: none;
+	/*display: none;*/
 	min-height: 100%;
 	width: 100%;
 }
@@ -133,6 +133,10 @@ body {
 	margin-right: 10%;
 }
 
+.social-mob {
+	display: none;
+}
+
 .mtab {
 	position: absolute;
 	right: 0;
@@ -153,6 +157,12 @@ body {
 .mtab .col{
 	display: inline-block;
 	right: 0;
+}
+
+.mtab li {
+	display: inline;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .tab-line-wrapper {
@@ -256,6 +266,10 @@ body {
 	.slide-title-info {
 		width: 100%;
 		padding-left: 0;
+	}
+
+	.social-mob {
+		display: inherit;
 	}
 
 }
