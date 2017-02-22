@@ -37,7 +37,7 @@ body {
 
 .slides li {
 	position: absolute;
-	padding-top: 9vh;
+	padding-top: 9%;
 	padding-left: 6vw;
 	padding-right: 6vw;
 	opacity: 1;
@@ -102,7 +102,7 @@ body {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding-bottom: 6vh;
+	padding-bottom: 6%;
 	padding-left: 6vw;
 	padding-right: 6vw;
 	z-index: 10;
@@ -219,7 +219,7 @@ body {
 		top: 0;
 		left: 0;
 		height: 2.4em;
-		margin-top: 3vh;
+		margin-top: 3%;
 		padding-left: 0;
 		padding-right: 0;
 		padding-bottom: 0;
@@ -236,8 +236,8 @@ body {
 	}
 
 	.slides li {
-		padding-top: 16vh;
-		padding-bottom: 6vh;
+		padding-top: 16%;
+		padding-bottom: 6%;
 	}
 
 	.slides li .col {
