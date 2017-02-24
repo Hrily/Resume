@@ -126,13 +126,18 @@ body {
 	position: relative;
 }
 
-.social img {
+.social img, .social i {
 	width: 30px;
 	height: 30px;
+	margin-right: 3px;
+	margin-left: 3px;
 }
 
-.social a {
-	padding: 10%;
+.social i {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	border-left: 1px solid white;
 }
 
 .social-mob {
