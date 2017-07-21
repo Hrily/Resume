@@ -37,12 +37,13 @@ function init() {
 			$('.slider').slider({indicators: false});
 			tab(document.getElementById('a-experience').parentElement);
 			showSlide(0);
+			clearInterval(interval);
 		}, 300)
-	}, 60);
+	}, 3000);
 }
 
 function tab(tab){
-    var tabLine = $('#tab-line-wrapper');
+	var tabLine = $('#tab-line-wrapper');
 	if(window.outerWidth <= 992){
 		$('.mtab li').css('border-bottom', '');
 		$(tab).css('border-bottom', '2px solid white');
