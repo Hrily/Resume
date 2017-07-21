@@ -14,8 +14,58 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   <script type="text/javascript" src="src/script.js"></script>
+  <style type="text/css">
+    body {
+      background-color: #F44336;
+    }
+    .slides-wrapper, .foot-bar {
+      opacity: 0;
+    }
+    .pseudo-title {
+      position: absolute;
+      top: 43%;
+      left: 6vw;
+      opacity: 1;
+      -webkit-transition: all .3s ease-out;
+           -o-transition: all .3s ease-out;
+              transition: all .3s ease-out;
+      z-index: 10;
+      color: white;
+    }
+    .pseudo-title h1 {
+      font-weight: 100;
+      margin: 0;
+    }
+    .pseudo-title h4 {
+      margin: 0;
+      font-weight: 100;
+      font-size: 200%;
+      -webkit-transition: all .15s ease-out;
+           -o-transition: all .15s ease-out;
+              transition: all .15s ease-out;
+    }
+  </style>
 </head>
 <body onload="init()">
+
+<div class="pseudo-title">
+  <h1>Hrishikesh Hiraskar</h1>
+  <h4 class="sub">Programming</h4>
+</div>
+
+<script type="text/javascript">
+  var tags = ['Programming', 'App Dev', 'Web Dev', 'Design', 'Hrily'];
+  var ind = 1;
+  var interval = setInterval(function(){
+    $('.pseudo-title h4').css('opacity', '0');
+    setTimeout(function(){
+      $('.pseudo-title h4').html(tags[ind]);
+      ind = (ind + 1) % 5;
+      $('.pseudo-title h4').css('opacity', '1');
+    }, 150);
+  }, 1000)
+</script>
+
 <div class="slides-wrapper fullscreen white-text">
     <ul class="slides">
 
@@ -37,8 +87,16 @@
             <div><b>INTERNSHIPS</b></div>
             <div>
               <br>
-              <a href="https://github.com/FOSSEE/xcos-on-web"><b>Xcos-on-Web : FOSSEE</b></a><br>
-              <span style="opacity: 0.5;">AUG16-DEC16</span><br>
+              <a href="https://www.haqdarshak.com/"><b>HaqDarshak, Mumbai </b></a> &nbsp;
+              <i>Software Engineering Intern</i>
+              <span class="right" style="opacity: 0.5;">MAY17-JUN17</span><br>
+              Full Stack development of Web Application for monitoring records, using MySql, Python Flask Server, and Material Design UI. Special role in optimizing database queries, developing user friendly and responsive UI. Added features like background syncing and on device generation of PDF (with word-processor) to hybrid Android app.
+            </div>
+            <div>
+              <br>
+              <a href="https://github.com/FOSSEE/xcos-on-web"><b>Xcos-on-Web : FOSSEE, IIT-B </b> </a> &nbsp;
+              <i>Software Engineering Intern</i> 
+              <span class="right" style="opacity: 0.5;">AUG16-DEC16</span><br>
               I revamped the Server Architecture and implemented Dynamic Plotting of Hybrid Systems.<br>
               My work was based on Python server and HighCharts JS API
             </div>
@@ -47,15 +105,17 @@
             <div><b>STARTUPS</b></div>
               <div>
                 <br>
-                <b>Wheels On Roll : NITK</b>
-                <span class="white-text" style="opacity: 0.5;">In Progress</span><br>
+                <b>Wheels On Roll : NITK</b> &nbsp;
+                <i>Lead Web, App and Product Developer</i>
+                <span class="right white-text" style="opacity: 0.5;">In Progress</span><br>
                 A cycle renting startup at NITK<br>
                 Developing Website, Android App and IOT framework for automation of rentals.<br>
                 <span style="opacity: 0.5;">More at <a href="https://wheelsonroll.com">wheelsonroll.com</a></span>
                 <br>
                 <br>
-                <b>ChangePay : NITK</b>
-                <span class="white-text" style="opacity: 0.5;">In Progress</span><br>
+                <b>ChangePay : NITK</b> &nbsp;
+                <i>Lead App Developer</i> 
+                <span class="right white-text" style="opacity: 0.5;">In Progress</span><br>
                 A Cashless, Cardless, and Phoneless payment system<br>
                 Developing Android App based on Microsoft Azure Services<br>
                 <span style="opacity: 0.5;">More at <a href="https://changepay.in">changepay.in</a></span>
@@ -84,7 +144,7 @@
                   <div class="wrapper">
                       <div class="arc arc-start"></div>    
                       <div class="arc arc-end" style="transform: rotate(88deg);"></div>
-                      <div class="arc-perc"><b>8.67</b></div>
+                      <div class="arc-perc"><b>8.46</b></div>
                   </div>
                   <div class="txt">CGPA in <a href="https://nitk.ac.in"><b>NITK</b></a> (current)</div>
                 </div>
@@ -135,6 +195,8 @@
                 <a href="https://github.com/Hrily/Codechef"><b>Codechef</b></a>, 
                 <a href="https://github.com/Hrily/UVa"><b>Uva</b></a> at GitHub<br>
               <br>
+              Mentor for <a href="https://sites.google.com/view/ieee-sp-dbms-cc/home"><b>DBMS and Cloud Computing</b></a> Summer Project 2017 at IEEE, NITK<br>
+              <br>
               <a href="https://www.facebook.com/hrilyscreens"><b>HrilyScreens</b></a> Page on Facebook - Home Screen theming in Android<br>
               <br>
               Tweaking Android and Ubuntu for <a href="https://hrily.github.io/Personalization"><b>Personalization</b></a><br>
@@ -161,7 +223,7 @@
                 <span>JavaScript</span>
                 <span>jQuery</span>
                 <span>PHP</span>
-                <span>Visual Basic</span>
+                <span>Assembly / Machine Code</span>
               </div>
               <br>
             </div>
@@ -186,23 +248,24 @@
                 <span>Jekyll</span>
                 <span>Git</span>
                 <span>PhoneGap</span>
-                <span>STL</span>
+                <span>C++ STL</span>
+                <span>Angular</span>
+                <span>Microsoft Azure</span>
+                <span>Vim</span>
                 <span>Photoshop</span>
                 <span>COREL Graphics Suite</span>
-                <span>Vim</span>
-                <span>Microsoft Azure</span>
-                <span>Firebase</span>
-                <span>Android SQLite</span>
+                <span>ThreeJS</span>
               </div>
               <br>
             </div>
             <div class="row txt">
-              <div><b>OPERATING SYSTEM</b></div>
+              <div><b>DBMS</b></div>
               <br>
               <div class='btn-group'>
-                <span>Windows</span>
-                <span>Linux</span>
-                <span>Android</span>
+                <span>SQL</span>
+                <span>MySQL</span>
+                <span>Firebase</span>
+                <span>Android SQLite</span>
               </div>
               <br>
             </div>
@@ -222,28 +285,27 @@
               </div>
               <br>
               <div class="projects-list">
-                <a href="https://github.com/WheelsOnRoll/WORWebsite"><b>Personal Website</b></a> - Showcase of my work, visit <a href="https://hrily.github.io"><b>hrily.github.io</b></a>
+                <a href="https://github.com/WheelsOnRoll/WORWebsite"><b>Personal Website &amp; Blog</b></a> - Showcase of my work and personal blog, visit <a href="https://hrily.github.io"><b>hrily.github.io</b></a>
               </div>
               <br>
               <div class="projects-list">
-                <a href="https://github.com/WheelsOnRoll/WORWebsite"><b>Personal Blog</b></a> - Jekyll based blog, visit <a href="https://hrily.github.io/blog"><b>hrily.github.io/blog</b></a>
-              </div>
-              <br>
-              <div class="projects-list">
-                <a href="https://github.com/Hrily/MaterialRippleTransition"><b>Material Ripple Transition</b></a> - Implementation of Ripple Transition of Material design on Web, <a  href="https://hrily.github.io/MaterialRippleTransition"><b>preview</b></a>
+                <a href="https://nitk.ac.in"><b>NITK Website</b></a> - NITK College Website <span style="opacity: 0.5">In Progress</span>
               </div>
               <br>
             </div>
             <div class="row txt">
               <div><b>PYTHON</b></div>
               <br>
-              <!-- TODO: Add StarCounting and WhatsAppTerm -->
               <div class="projects-list">
-                <a href="https://github.com/Hrily/WORWebsite"><b>TopMusicPull</b></a> - Script to download and maintain Youtube playlists like Billboard HOT 100
+                <a href="https://github.com/Hrily/SimOS"><b>SimOS</b></a> - Simulation of principles applied in Operating Systems
               </div>
               <br>
               <div class="projects-list">
-                <a href="https://github.com/Hrily/WORWebsite"><b>Image2Ascii</b></a> - Script to convert Image to Ascii
+                <a href="https://github.com/Hrily/TopMusicPull"><b>TopMusicPull</b></a> - Script to download and maintain Youtube playlists like Billboard HOT 100
+              </div>
+              <br>
+              <div class="projects-list">
+                <a href="https://github.com/Hrily/Python-Image2Ascii"><b>Image2Ascii</b></a> - Script to convert Image to Ascii
               </div>
               <br>
             </div>
@@ -253,19 +315,19 @@
               <div><b>ANDROID</b></div>
               <br>
               <div class="projects-list">
-                <a href="https://github.com/Hrily/WORWebsite"><b>SH</b></a> - Messenger just for two people
+                <a href="https://github.com/Hrily/SH"><b>SH</b></a> - Messenger just for two people
               </div>
               <br>
               <div class="projects-list">
-                <a href="https://github.com/Hrily/WORWebsite"><b>NotesNearby</b></a> - Augmented Reality based app done for Microsoft code.fun.do 2016-17
+                <a href="https://github.com/Hrily/NotesNearby"><b>NotesNearby</b></a> - Augmented Reality based app done for Microsoft code.fun.do 2016-17
               </div>
               <br>
               <div class="projects-list">
-                <a href="https://github.com/Hrily/WORWebsite"><b>TicTacToe</b></a> - TicTacToe game with computer opponent
+                <a href="https://github.com/Hrily/ZBot"><b>ZBot</b></a> - Chat bot to play text based games from ZMachine
               </div>
               <br>
               <div class="projects-list">
-                <a href="https://github.com/Hrily/WORWebsite"><b>ChangePay</b></a> - App for NITK StartUp, based on Microsoft Azure Services <br><span style="opacity: 0.5">In Progress</span>
+                <a href="https://changepay.in"><b>ChangePay</b></a> - App for NITK StartUp, based on Microsoft Azure Services <br><span style="opacity: 0.5">In Progress</span>
               </div>
               <br>
             </div>
@@ -291,25 +353,25 @@
 
 </div>
 
-    <div class="foot-bar">
-      <div class="row">
-        <ul class="social col">
-          <li class="col"><a href="https://www.facebook.com/hrishi.hiraskar7"><img src="images/logo_fb_white.png"/></a></li>
-          <li class="col"><a href="https://github.com/Hrily"><img src="images/logo_github_white.png"/></a></li>
-          <li class="col"><a href="https://www.linkedin.com/hrishi.hiraskar"><img src="images/logo_linkedin_white.png"/></a></li>
-          <li class="col" style="margin-left: 3px !important;"><a href="https://github.com/Hrily/Resume/raw/gh-pages/Resume%20-%20Hrishikesh%20Hiraskar.pdf"><i class="material-icons white-text">file_download</i></a></li>
-        </ul>
-        <ul class="mtab col">
-          <li><a id='a-experience' href="#!" onclick="slide(0, event, 'red')">EXPERIENCE</a></li>
-          <li><a href="#!" onclick="slide(1, event, 'teal darken-2')">ACADEMICS</a></li>
-          <li><a href="#!" onclick="slide(2, event, 'blue-grey darken-2')">TECHNICAL</a></li>
-          <li><a href="#!" onclick="slide(3, event, 'green darken-1')">PROJECTS</a></li>
-          <div id="tab-line-wrapper" class="tab-line-wrapper">
-            <div class="tab-line"></div>
-          </div>
-        </ul>
+<div class="foot-bar">
+  <div class="row">
+    <ul class="social col">
+      <li class="col"><a href="https://www.facebook.com/hrishi.hiraskar7"><img src="images/logo_fb_white.png"/></a></li>
+      <li class="col"><a href="https://github.com/Hrily"><img src="images/logo_github_white.png"/></a></li>
+      <li class="col"><a href="https://www.linkedin.com/hrishi.hiraskar"><img src="images/logo_linkedin_white.png"/></a></li>
+      <li class="col" style="margin-left: 3px !important;"><a href="https://github.com/Hrily/Resume/raw/gh-pages/Resume%20-%20Hrishikesh%20Hiraskar.pdf"><i class="material-icons white-text">file_download</i></a></li>
+    </ul>
+    <ul class="mtab col">
+      <li><a id='a-experience' href="#!" onclick="slide(0, event, 'red')">EXPERIENCE</a></li>
+      <li><a href="#!" onclick="slide(1, event, 'teal darken-2')">ACADEMICS</a></li>
+      <li><a href="#!" onclick="slide(2, event, 'blue-grey darken-2')">TECHNICAL</a></li>
+      <li><a href="#!" onclick="slide(3, event, 'green darken-1')">PROJECTS</a></li>
+      <div id="tab-line-wrapper" class="tab-line-wrapper">
+        <div class="tab-line"></div>
       </div>
-    </div>
+    </ul>
+  </div>
+</div>
 
 </body>
 </html>

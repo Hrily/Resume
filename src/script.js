@@ -25,15 +25,29 @@ function slide(n, event, color){
 }
 
 function init() {
-	$('.slider').slider({indicators: false});
-	tab(document.getElementById('a-experience').parentElement);
-	showSlide(0);
+	setTimeout(function(){
+		$('.pseudo-title h4').css('display', 'none');
+		$('.pseudo-title').css({
+			'top': $('.slide-title').offset().top + 'px'
+		});
+		setTimeout(function(){
+			$('.pseudo-title').remove();
+			$('.slides-wrapper').css('opacity', '1');
+			$('.foot-bar').css('opacity', '1');
+			$('.slider').slider({indicators: false});
+			tab(document.getElementById('a-experience').parentElement);
+			showSlide(0);
+		}, 300)
+	}, 60);
 }
 
 function tab(tab){
-	// event = event || window.event;
-    // var tab = event.target.parentElement;
     var tabLine = $('#tab-line-wrapper');
+	if(window.outerWidth <= 992){
+		$('.mtab li').css('border-bottom', '');
+		$(tab).css('border-bottom', '2px solid white');
+		return;
+	}
 	var l = tab.offsetLeft;
 	var r = tab.offsetLeft + tab.offsetWidth;
 	r = tab.parentElement.offsetWidth - r;
