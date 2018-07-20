@@ -1,6 +1,7 @@
 body {
 	overflow: hidden;
 	font-size: 1.1em; 
+	font-weight: 300;	
 }
 
 .slides a:hover {
@@ -175,6 +176,7 @@ body {
 	display: inline;
 	padding-left: 15px;
 	padding-right: 15px;
+	font-weight: 400 !important;	
 }
 
 .tab-line-wrapper {
